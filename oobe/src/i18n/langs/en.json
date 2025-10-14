@@ -1,1 +1,14 @@
-{}
+{
+  "components.Sidebar.applicationHub": {
+    "defaultMessage": "Application Hub"
+  },
+  "components.Sidebar.dashboard": {
+    "defaultMessage": "Dashboard"
+  },
+  "components.Sidebar.developerCenter": {
+    "defaultMessage": "Developer Center"
+  },
+  "components.Sidebar.exit": {
+    "defaultMessage": "Exit"
+  }
+}
