@@ -13,15 +13,24 @@ import IndustrialAutomation from "./pages/IndustrialAutomation";
 import SmartAlertManagement from "./pages/SmartAlertManagement";
 import MedicalAlertManagement from "./pages/MedicalAlertManagement";
 import IndustrialAlertManagement from "./pages/IndustrialAlertManagement";
+import { useLocation } from "react-router-dom";
+
+const HIDE_SIDEBAR_ROUTES = [
+  "/medical-alert-management",
+  "/smart-alert-management",
+  "/industrial-alert-management",
+];
 
 function App() {
   const apiClient = useMemo(() => {
     return new APIClient();
   }, []);
+  const location = useLocation();
+  const hideSidebar = HIDE_SIDEBAR_ROUTES.includes(location.pathname);
 
   return (
     <div className="d-flex vh-100">
-      <Sidebar />
+      {!hideSidebar && <Sidebar />}
 
       <section className="flex-grow-1 d-flex flex-column overflow-auto">
         <main className="flex-grow-1">

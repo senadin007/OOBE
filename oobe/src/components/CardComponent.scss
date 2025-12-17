@@ -1,7 +1,7 @@
 .card-component {
   background-color: #111 !important;
   color: white !important;
-  min-width: 350px;
+  min-width: 400px !important;
   flex: 0 1 calc((100% - 2rem * 2) / 3);
   max-height: 500px;
   padding: 1.5rem;
@@ -40,5 +40,6 @@
 @media (max-width: 600px) {
   .card-component {
     flex: 0 1 100%;
+    min-width: 300px !important;
   }
 }

@@ -27,7 +27,7 @@ const SmartBuilding = () => {
         </h3>
       </div>
 
-      <div className="cards-wrapper">
+      <div className="cards-wrapper-smartBuilding">
         <Col>
           <NavLink to="/smart-alert-management" className="nav-link">
             <CardComponent

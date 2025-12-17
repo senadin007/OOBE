@@ -26,7 +26,7 @@ const Medical = () => {
         </h3>
       </div>
 
-      <div className="cards-wrapper">
+      <div className="cards-wrapper-medical">
         <Col>
           <CardComponent
             icon={cardiology}
