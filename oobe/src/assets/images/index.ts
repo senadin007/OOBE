@@ -16,6 +16,9 @@ import hd from "./hd.png";
 import settings from "./settings.png";
 import rgbPattern1 from "./rgb_pattern1.jpg";
 import rgbPattern2 from "./rgb_pattern2.jpg";
+import redPills from "./red_pills.png";
+import redPillsScanned from "./red_pills_scanned.png";
+import whitePills from "./white_pills.png";
 
 export {
   logo,
@@ -36,4 +39,7 @@ export {
   settings,
   rgbPattern1,
   rgbPattern2,
+  redPills,
+  redPillsScanned,
+  whitePills,
 };

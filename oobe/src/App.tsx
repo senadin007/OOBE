@@ -16,6 +16,7 @@ import IndustrialAlertManagement from "./pages/IndustrialAlertManagement";
 import { useLocation } from "react-router-dom";
 import VideoPlayerTestTool from "./pages/VideoPlayerTestTool";
 import RGBPatternTestTool from "./pages/RGBPatternTestTool";
+import SampleIntegrityCheck from "./pages/SampleIntegrityCheck";
 
 const HIDE_SIDEBAR_ROUTES = [
   "/medical-alert-management",
@@ -25,6 +26,7 @@ const HIDE_SIDEBAR_ROUTES = [
   "/medical",
   "/industrial",
   "/rgb-pattern-test-tool",
+  "/sample-integrity-check",
 ];
 
 function App() {
@@ -66,6 +68,10 @@ function App() {
             <Route
               path="/rgb-pattern-test-tool"
               element={<RGBPatternTestTool />}
+            />
+            <Route
+              path="/sample-integrity-check"
+              element={<SampleIntegrityCheck />}
             />
             <Route
               path="/hub"

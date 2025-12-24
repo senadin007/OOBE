@@ -1,4 +1,13 @@
 {
+  "SampleIntegrityCheck.Compliant product": {
+    "defaultMessage": "Compliant product!"
+  },
+  "SampleIntegrityCheck.analyseMessage": {
+    "defaultMessage": "Scanning in progress..."
+  },
+  "SampleIntegrityCheck.anomaliesDetectedMessage": {
+    "defaultMessage": "Anomalies detected"
+  },
   "components.DeviceDetailsCard.cpuArchitecture": {
     "defaultMessage": "CPU architecture"
   },
@@ -40,6 +49,15 @@
   },
   "components.GeolocalizationCard.title": {
     "defaultMessage": "Geolocalization"
+  },
+  "components.SampleIntegrityCheck.analyzeNextButton": {
+    "defaultMessage": "Analyze next object"
+  },
+  "components.SampleIntegrityCheck.mainMessage": {
+    "defaultMessage": "Place the object in front of the camera within the detection area."
+  },
+  "components.SampleIntegrityCheck.startButton": {
+    "defaultMessage": "Start analysis"
   },
   "components.Sidebar.dashboard": {
     "defaultMessage": "Dashboard"

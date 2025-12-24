@@ -75,21 +75,23 @@ const Medical = () => {
         </Col>
 
         <Col>
-          <CardComponent
-            icon={settingsEthernet}
-            title={
-              <FormattedMessage
-                id="pages.Medical.check.title"
-                defaultMessage="Sample Integrity Check"
-              />
-            }
-            description={
-              <FormattedMessage
-                id="pages.Medical.check.desc"
-                defaultMessage="Detect defects and verify sample integrity."
-              />
-            }
-          />
+          <NavLink to="/sample-integrity-check" className="nav-link">
+            <CardComponent
+              icon={settingsEthernet}
+              title={
+                <FormattedMessage
+                  id="pages.Medical.check.title"
+                  defaultMessage="Sample Integrity Check"
+                />
+              }
+              description={
+                <FormattedMessage
+                  id="pages.Medical.check.desc"
+                  defaultMessage="Detect defects and verify sample integrity."
+                />
+              }
+            />
+          </NavLink>
         </Col>
       </div>
     </Container>
