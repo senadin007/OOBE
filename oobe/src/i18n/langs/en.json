@@ -89,15 +89,6 @@
   "components.GeolocalizationCard.title": {
     "defaultMessage": "Geolocalization"
   },
-  "components.SampleIntegrityCheck.analyzeNextButton": {
-    "defaultMessage": "Analyze next object"
-  },
-  "components.SampleIntegrityCheck.mainMessage": {
-    "defaultMessage": "Place the object in front of the camera within the detection area."
-  },
-  "components.SampleIntegrityCheck.startButton": {
-    "defaultMessage": "Start analysis"
-  },
   "components.QualityInspection.analyzeNextObjectButton": {
     "defaultMessage": "Analyze next object"
   },
@@ -109,6 +100,15 @@
   },
   "components.QualityInspection.tryAgainButton": {
     "defaultMessage": "Try Again"
+  },
+  "components.SampleIntegrityCheck.analyzeNextButton": {
+    "defaultMessage": "Analyze next object"
+  },
+  "components.SampleIntegrityCheck.mainMessage": {
+    "defaultMessage": "Place the object in front of the camera within the detection area."
+  },
+  "components.SampleIntegrityCheck.startButton": {
+    "defaultMessage": "Start analysis"
   },
   "components.Sidebar.dashboard": {
     "defaultMessage": "Dashboard"
