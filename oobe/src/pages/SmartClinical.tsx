@@ -188,8 +188,9 @@ const SmartClinical = ({ apiClient }: SmartClinicalProps) => {
                 <p>
                   <FormattedMessage
                     id="pages.SmartClinical.age"
-                    defaultMessage="Age: "
+                    defaultMessage="Age:"
                   />
+                   &nbsp;
                   {personData.age}
                 </p>
               </div>
@@ -197,36 +198,40 @@ const SmartClinical = ({ apiClient }: SmartClinicalProps) => {
                 <strong>
                   <FormattedMessage
                     id="pages.SmartClinical.bloodType"
-                    defaultMessage="Blood Type: "
-                  />
+                    defaultMessage="Blood Type:"
+                    />
                 </strong>
+                    &nbsp;
                 {personData.bloodType}
               </p>
               <p>
                 <strong>
                   <FormattedMessage
                     id="pages.SmartClinical.height"
-                    defaultMessage="Height: "
+                    defaultMessage="Height:"
                   />
                 </strong>
+                 &nbsp;
                 {personData.heightCm} Cm
               </p>
               <p>
                 <strong>
                   <FormattedMessage
                     id="pages.SmartClinical.weight"
-                    defaultMessage="Weight: "
+                    defaultMessage="Weight:"
                   />
                 </strong>
+                &nbsp;
                 {personData.weightKg} Kg
               </p>
               <p>
                 <strong>
                   <FormattedMessage
                     id="pages.SmartClinical.physician"
-                    defaultMessage="Attending Physician: "
+                    defaultMessage="Attending Physician:"
                   />
                 </strong>
+                &nbsp;
                 {personData.attendingPhysician}
               </p>
               <hr className="border-secondary" />
@@ -234,9 +239,10 @@ const SmartClinical = ({ apiClient }: SmartClinicalProps) => {
                 <strong>
                   <FormattedMessage
                     id="pages.SmartClinical.reasonForHospitalization"
-                    defaultMessage="Reason for hospitalization: "
+                    defaultMessage="Reason for hospitalization:"
                   />
                 </strong>
+                &nbsp;
                 {personData.reasonForHospitalization}
                 <p>{personData.allergies}</p>
               </p>
