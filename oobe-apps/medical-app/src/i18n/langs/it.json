@@ -5,6 +5,30 @@
   "overview": {
     "defaultMessage": "Patient Overview"
   },
+  "overview.BloodType": {
+    "defaultMessage": "Blood Type"
+  },
+  "overview.Name": {
+    "defaultMessage": "Name"
+  },
+  "overview.patientAge": {
+    "defaultMessage": "Age"
+  },
+  "overview.patientAttendingPhysician": {
+    "defaultMessage": "Attending Physician"
+  },
+  "overview.patientHeight": {
+    "defaultMessage": "Height"
+  },
+  "overview.patientWeight": {
+    "defaultMessage": "Weight"
+  },
+  "overview.reasonDetails": {
+    "defaultMessage": "Reason for hospitalization and details"
+  },
+  "overview.title": {
+    "defaultMessage": "Patient Overview"
+  },
   "reports": {
     "defaultMessage": "Medical Reports"
   },
