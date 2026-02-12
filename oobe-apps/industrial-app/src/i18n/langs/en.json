@@ -1,1 +1,11 @@
-{}
+{
+  "line": {
+    "defaultMessage": "Line ({lineId})"
+  },
+  "allLines": {
+    "defaultMessage": "All Lines (Global Views)"
+  },
+  "loading": {
+    "defaultMessage": "Loading..."
+  }
+}
