@@ -1,0 +1,34 @@
+{
+  "interface_name": "com.oobe.quality.Inspection",
+  "version_major": 0,
+  "version_minor": 1,
+  "type": "datastream",
+  "ownership": "device",
+  "aggregation": "object",
+  "mappings": [
+    {
+      "endpoint": "/%{imageName}/shortCircuit",
+      "type": "integer",
+      "explicit_timestamp": true,
+      "description": "Number of short circuit errors in the image"
+    },
+    {
+      "endpoint": "/%{imageName}/drillError",
+      "type": "integer",
+      "explicit_timestamp": true,
+      "description": "Number of missing hole errors in the image"
+    },
+    {
+      "endpoint": "/%{imageName}/timestamp",
+      "type": "datetime",
+      "explicit_timestamp": true,
+      "description": "Timestamp of when the image was taken"
+    },
+    {
+      "endpoint": "/%{imageName}/productName",
+      "type": "string",
+      "explicit_timestamp": true,
+      "description": "Product name"
+    }
+  ]
+}

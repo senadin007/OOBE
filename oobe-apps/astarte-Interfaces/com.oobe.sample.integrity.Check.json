@@ -1,0 +1,29 @@
+{
+  "interface_name": "com.oobe.sample.integrity.Check",
+  "version_major": 0,
+  "version_minor": 1,
+  "type": "datastream",
+  "ownership": "device",
+  "aggregation": "object",
+  "mappings": [
+    {
+      "endpoint": "/%{imageName}/timestamp",
+      "type": "datetime",
+      "explicit_timestamp": true,
+      "description": "Timestamp of when the image was taken"
+    },
+    {
+      "endpoint": "/%{imageName}/quality",
+      "type": "boolean",
+      "explicit_timestamp": true,
+      "description": "Determines the quality of the piece in the image",
+      "doc": "True if quality is OK. False if quality is not OK."
+    },
+    {
+      "endpoint": "/%{imageName}/productName",
+      "type": "string",
+      "explicit_timestamp": true,
+      "description": "Product name"
+    }
+  ]
+}
