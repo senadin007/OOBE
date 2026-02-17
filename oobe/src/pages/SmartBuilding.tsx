@@ -1,4 +1,4 @@
-import { Container, Image, Col, Button } from "react-bootstrap";
+import { Container, Image, Col, Button, Nav } from "react-bootstrap";
 import "./SmartBuilding.scss";
 import CardComponent from "../components/CardComponent";
 import { falling, interactiveSpace, logo, warning } from "../assets/images";
@@ -7,8 +7,10 @@ import "./SmartAlertManagement";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import FaceRecognitionModal from "../components/FaceRecognitionModal";
+import { useState } from "react";
 
-const SmartBuilding = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <Container fluid className="smartBuilding-container p-3">
       <Col xs={2} sm={6} md="auto" className="back-button-smart">
@@ -38,7 +40,11 @@ const SmartBuilding = () => {
 
       <div className="cards-wrapper-smartBuilding">
         <Col>
-          <NavLink to="/smart-loby" className="nav-link">
+          <Nav.Link
+            as="button"
+            onClick={() => setShowModal(true)}
+            className="modal-nav-link"
+          >
             <CardComponent
               icon={interactiveSpace}
               title={
@@ -54,8 +60,14 @@ const SmartBuilding = () => {
                 />
               }
             />
-          </NavLink>
+          </Nav.Link>
         </Col>
+
+        <FaceRecognitionModal
+          show={showModal}
+          onHide={() => setShowModal(false)}
+          url="/smart-loby"
+        />
 
         <Col>
           <NavLink to="/smart-alert-management" className="nav-link">
