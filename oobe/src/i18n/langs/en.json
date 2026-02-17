@@ -224,6 +224,18 @@
   "imageFormatError": {
     "defaultMessage": "Backend rejected the image format."
   },
+  "faceRecognitionModal.authenticatedUser": {
+    "defaultMessage": "Authorization confirmed"
+  },
+  "faceRecognitionModal.authenticatingUser": {
+    "defaultMessage": "Authenticating user"
+  },
+  "faceRecognitionModal.checkingPermissions": {
+    "defaultMessage": "Checking access permissions…"
+  },
+  "faceRecognitionModal.tenantRecognized": {
+    "defaultMessage": "Tenant successfully recognized."
+  },
   "industrialAlertManagement.dischargePressure": {
     "defaultMessage": "DISCHARGE PRESSURE"
   },
