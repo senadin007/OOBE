@@ -1,42 +1,70 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Image, Collapse, Button } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 import "./AlarmResolvingSidebar.scss";
 import { logo, padlockLocked, padlockUnlocked } from "../assets/images";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import type { APIClient, FaceRecognitionUpdate } from "../api/APIClient";
 
 interface AlarmResolvingSidebarProps {
   show: boolean;
   onHide: () => void;
+  apiClient: APIClient;
 }
 
 const AlarmResolvingSidebar = ({
   show,
   onHide,
+  apiClient,
 }: AlarmResolvingSidebarProps) => {
   const [status, setStatus] = useState("notAuthenticated");
+  const isProcessingRef = useRef(false);
 
   useEffect(() => {
-    if (show) {
-      if (status === "notAuthenticated") {
-        const authenticationTimer = setTimeout(() => {
-          setStatus("authenticated");
-        }, 3000);
-        return () => clearTimeout(authenticationTimer);
-      } else if (status === "authenticated") {
-        const alarmCheckingTimer = setTimeout(() => {
-          setStatus("alarmResolvingInstructions");
-        }, 6000);
-        return () => clearTimeout(alarmCheckingTimer);
-      } else if (status === "alarmCheck") {
-        const alarmResolvedTimer = setTimeout(() => {
-          setStatus("alarmResolved");
-        }, 9000);
-        return () => clearTimeout(alarmResolvedTimer);
-      }
+    if (!show) {
+      isProcessingRef.current = false;
+      setStatus("notAuthenticated");
+      apiClient.disconnectFaceRecognition();
+      return;
     }
-  }, [show, status]);
+
+    if (status === "notAuthenticated" && !isProcessingRef.current) {
+      apiClient.connectFaceRecognition(
+        (updateData: FaceRecognitionUpdate[]) => {
+          if (
+            updateData.length &&
+            updateData[0].label === "face" &&
+            !isProcessingRef.current
+          ) {
+            isProcessingRef.current = true;
+            setTimeout(() => {
+              setStatus("authenticated");
+            }, 1000);
+          }
+        },
+      );
+    }
+  }, [show, status, apiClient]);
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout>;
+
+    if (status === "authenticated") {
+      timer = setTimeout(() => {
+        setStatus("alarmResolvingInstructions");
+        apiClient.disconnectFaceRecognition();
+      }, 2000);
+    } else if (status === "alarmCheck") {
+      timer = setTimeout(() => {
+        setStatus("alarmResolved");
+      }, 3000);
+    }
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [status, apiClient]);
 
   return (
     <>

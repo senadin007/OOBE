@@ -231,6 +231,7 @@ const MedicalAlertManagement = ({ apiClient }: MedicalAlertManagementProps) => {
       <AlarmResolvingSidebar
         show={showSidebar}
         onHide={() => setShowSidebar(false)}
+        apiClient={apiClient}
       />
     </Container>
   );

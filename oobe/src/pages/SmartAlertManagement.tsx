@@ -225,6 +225,7 @@ const SmartAlertManagement = ({ apiClient }: SmartAlertManagementProps) => {
       <AlarmResolvingSidebar
         show={showSidebar}
         onHide={() => setShowSidebar(false)}
+        apiClient={apiClient}
       />
     </Container>
   );

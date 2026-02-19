@@ -248,6 +248,7 @@ const IndustrialAlertManagement = ({
       <AlarmResolvingSidebar
         show={showSidebar}
         onHide={() => setShowSidebar(false)}
+        apiClient={apiClient}
       />
     </Container>
   );
