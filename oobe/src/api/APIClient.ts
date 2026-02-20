@@ -17,6 +17,18 @@ type DashboardMessage = {
   data: DashboardUpdate;
 };
 
+export type PersonResult = {
+  categoryId: number;
+  bbox: number[];
+  score: number;
+};
+
+interface BackendPersonResult {
+  category_id: number;
+  bbox: number[];
+  score: number;
+}
+
 export type InverterStatus = "ready" | "fault";
 export type SmartUpdate =
   | { field: "plantStatus"; value: string }
@@ -396,5 +408,24 @@ export class APIClient {
   disconnectSmartClinicalRecord() {
     this.ws?.close();
     this.ws = undefined;
+  }
+  async getPersonResult(imageFile: File): Promise<PersonResult[]> {
+    const response = await this.axiosInstance.post<BackendPersonResult[]>(
+      "/people-detect",
+      imageFile,
+      {
+        headers: {
+          "Content-Type": imageFile.type,
+        },
+      },
+    );
+
+    return response.data.map(
+      (item): PersonResult => ({
+        categoryId: item.category_id,
+        bbox: item.bbox,
+        score: item.score,
+      }),
+    );
   }
 }
