@@ -281,7 +281,7 @@ const App = ({ astarteUrl, realm, deviceId, token }: AppProps) => {
                   label={
                     <FormattedMessage
                       id="busiestTime"
-                      defaultMessage="Busiest Time"
+                      defaultMessage="Busiest Hour"
                     />
                   }
                   value={weeklyStats.busiestTime}
