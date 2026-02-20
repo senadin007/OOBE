@@ -1,7 +1,7 @@
 import { Container, Image, Col, Button } from "react-bootstrap";
 import "./SmartBuilding.scss";
 import CardComponent from "../components/CardComponent";
-import { interactiveSpace, logo, warning } from "../assets/images";
+import { falling, interactiveSpace, logo, warning } from "../assets/images";
 import { FormattedMessage } from "react-intl";
 import "./SmartAlertManagement";
 import { NavLink } from "react-router-dom";
@@ -71,6 +71,25 @@ const SmartBuilding = () => {
                 <FormattedMessage
                   id="pages.general.alertManagement.desc"
                   defaultMessage="View and resolve machine alerts."
+                />
+              }
+            />
+          </NavLink>
+        </Col>
+        <Col>
+          <NavLink to="/crowd-and-fall-detection" className="nav-link">
+            <CardComponent
+              icon={falling}
+              title={
+                <FormattedMessage
+                  id="pages.SmartBuilding.detection.title"
+                  defaultMessage="Crowd and fall detection"
+                />
+              }
+              description={
+                <FormattedMessage
+                  id="pages.SmartBuilding.detection.desc"
+                  defaultMessage="Count people and detect falls in common areas."
                 />
               }
             />
