@@ -20,6 +20,7 @@ import SampleIntegrityCheck from "./pages/SampleIntegrityCheck";
 import SmartClinical from "./pages/SmartClinical";
 import QualityInspection from "./pages/QualityInspection";
 import HighResolutionVisuals from "./pages/HighResolutionVisuals";
+import CrowdAndFallDetection from "./pages/CrowdAndFallDetection";
 
 const HIDE_SIDEBAR_ROUTES = [
   "/medical-alert-management",
@@ -34,6 +35,7 @@ const HIDE_SIDEBAR_ROUTES = [
   "/smart-clinical",
   "/quality-inspection",
   "/high-resolution-visuals",
+  "/crowd-and-fall-detection",
 ];
 
 function App() {
@@ -84,6 +86,10 @@ function App() {
             <Route
               path="/sample-integrity-check"
               element={<SampleIntegrityCheck apiClient={apiClient} />}
+            />
+            <Route
+              path="/crowd-and-fall-detection"
+              element={<CrowdAndFallDetection apiClient={apiClient} />}
             />
             <Route
               path="/smart-clinical"
