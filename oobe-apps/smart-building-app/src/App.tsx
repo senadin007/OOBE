@@ -70,6 +70,7 @@ const App = ({ astarteUrl, realm, deviceId, token }: AppProps) => {
       .then((results) => {
         const combined: CameraHistoryData[] = results
           .flat()
+          .filter((item): item is CameraHistoryData => item != null)
           .sort(
             (a, b) =>
               new Date(b.datetime).getTime() - new Date(a.datetime).getTime(),
@@ -172,7 +173,9 @@ const App = ({ astarteUrl, realm, deviceId, token }: AppProps) => {
         ),
       )
       .then((results) => {
-        const combined: CameraHistoryData[] = results.flat();
+        const combined: CameraHistoryData[] = results
+          .flat()
+          .filter((item): item is CameraHistoryData => item != null);
         const stats = calculateWeeklyStats(combined, intl);
         setWeeklyStats(stats);
       })
