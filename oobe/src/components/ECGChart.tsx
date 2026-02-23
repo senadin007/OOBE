@@ -49,8 +49,14 @@ const ECGChart = ({
           grid: { show: true, stroke: "#333", width: 1 },
           stroke: "#fff",
           values: (self, ticks) => {
-             return ticks.map(t => new Date(t).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", second: "2-digit" }));
-          }
+            return ticks.map((t) =>
+              new Date(t).toLocaleTimeString("en-GB", {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+              }),
+            );
+          },
         },
         {
           // y-axis
@@ -70,10 +76,10 @@ const ECGChart = ({
       },
     };
 
-    const chartData = [
-      data.map((d) => d.x),
-      data.map((d) => d.y),
-    ] as [number[], number[]];
+    const chartData = [data.map((d) => d.x), data.map((d) => d.y)] as [
+      number[],
+      number[],
+    ];
 
     const u = new uPlot(opts, chartData, chartRef.current);
     uPlotRef.current = u;
@@ -83,10 +89,10 @@ const ECGChart = ({
       if (!uPlotRef.current) return;
       for (const entry of entries) {
         if (entry.contentRect) {
-            uPlotRef.current.setSize({
-                width: entry.contentRect.width,
-                height: 150
-            });
+          uPlotRef.current.setSize({
+            width: entry.contentRect.width,
+            height: 150,
+          });
         }
       }
     });
@@ -104,7 +110,7 @@ const ECGChart = ({
   // Update data
   useEffect(() => {
     if (!uPlotRef.current) return;
-    
+
     // Transform data for uPlot
     // uPlot expects [series1_data, series2_data, ...]
     // where series1_data is x-values
@@ -112,8 +118,8 @@ const ECGChart = ({
     const yValues = data.map((d) => d.y);
 
     if (xValues.length > 0) {
-        // Update data
-        uPlotRef.current.setData([xValues, yValues]);
+      // Update data
+      uPlotRef.current.setData([xValues, yValues]);
     }
   }, [data]);
 
@@ -129,7 +135,10 @@ const ECGChart = ({
         <div className="usage-section d-flex flex-column h-100">
           <Row className="subtitle-container align-items-center justify-content-between mb-2">
             <Col xs="auto" className="d-flex align-items-center ms-3 gap-3">
-               <div className="dot dot-default" style={{backgroundColor: color}} />
+              <div
+                className="dot dot-default"
+                style={{ backgroundColor: color }}
+              />
               <span className="fw-semibold fs-1 text-white">
                 {subtitle || "Loading..."}
               </span>

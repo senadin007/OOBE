@@ -254,9 +254,7 @@ const SmartClinical = ({ apiClient }: SmartClinicalProps) => {
               <Col xs={12} md={12} lg={12} className="d-flex">
                 <ECGChart
                   title={"ECG Recording"}
-                  subtitle={
-                    realTimeBpmCurrent.toFixed(1).toString() + " bpm"
-                  }
+                  subtitle={realTimeBpmCurrent.toFixed(1).toString() + " bpm"}
                   data={ecgCurrent}
                   color="#165BAA"
                 />
