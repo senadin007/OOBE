@@ -59,6 +59,8 @@ import secondary_entrance_2 from "./secondary_entrance_2.png";
 import secondary_entrance_3 from "./secondary_entrance_3.png";
 import secondary_entrance_4 from "./secondary_entrance_4.png";
 import secondary_entrance_5 from "./secondary_entrance_5.png";
+import padlockLocked from "./padlock_locked.png";
+import padlockUnlocked from "./padlock_unlocked.png";
 
 export {
   logo,
@@ -122,4 +124,6 @@ export {
   secondary_entrance_3,
   secondary_entrance_4,
   secondary_entrance_5,
+  padlockLocked,
+  padlockUnlocked,
 };
