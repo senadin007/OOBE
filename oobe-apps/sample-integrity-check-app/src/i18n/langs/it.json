@@ -1,41 +1,41 @@
 {
   "pillsIntegrityCheck": {
-    "defaultMessage": "Pills integrity check (broken vs good cavities)"
+    "defaultMessage": "Verifica integrità blister (alveoli vuoti o pieni)"
   },
   "noData": {
-    "defaultMessage": "No data available."
+    "defaultMessage": "Dati non disponibili."
   },
   "loading": {
-    "defaultMessage": "Loading..."
+    "defaultMessage": "Caricamento…"
   },
   "topProducts": {
-    "defaultMessage": "Top Products"
+    "defaultMessage": "Prodotti a maggiore volume"
   },
   "sampleIntegrityCheck": {
-    "defaultMessage": "Sample integrity check"
+    "defaultMessage": "Controllo integrità del campione"
   },
   "stats.highestValuesRecordedTitle": {
-    "defaultMessage": "Highest Values Recorded"
+    "defaultMessage": "Valori massimi registrati"
   },
   "stats.totalPieces": {
-    "defaultMessage": "Total Pieces"
+    "defaultMessage": "Pezzi totali prodotti"
   },
   "stats.qualityOk": {
-    "defaultMessage": "Quality OK"
+    "defaultMessage": "Qualità conforme (OK)"
   },
   "stats.qualityKo": {
-    "defaultMessage": "Quality KO"
+    "defaultMessage": "Qualità non conforme (KO)"
   },
   "stats.qualityRate": {
-    "defaultMessage": "Quality Rate"
+    "defaultMessage": "Indice di qualità"
   },
   "chart.broken": {
-    "defaultMessage": "Broken"
+    "defaultMessage": "Alveoli vuoti"
   },
   "chart.goodState": {
-    "defaultMessage": "Good state"
+    "defaultMessage": "Alveoli pieni"
   },
   "fetchData.error": {
-    "defaultMessage": "Failed to fetch data."
+    "defaultMessage": "Errore nel recupero dei dati."
   }
 }
